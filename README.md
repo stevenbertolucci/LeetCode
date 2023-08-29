@@ -1,4 +1,4 @@
-# LeetCode
+# LeetCode and Random Data Structures
 Random problems pulled from LeetCode to improve my coding experience. 
 
 ## Description
