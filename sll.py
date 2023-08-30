@@ -187,7 +187,23 @@ class LinkedList:
         and the end of the list to make a slice of the requested size, this method raises a custom
         “SLLException”. Code for the exception is provided in the skeleton file.
         """
-        pass
+        if start_index < 0 or start_index >= self.length():
+            raise SLLException
+
+        if size <= 0 or start_index + size > self.length():
+            raise SLLException
+
+        new_list = LinkedList()
+        node = self._head.next
+
+        for i in range(start_index):
+            node = node.next
+
+        for i in range(size):
+            new_list.insert_back(node.value)
+            node = node.next
+
+        return new_list
 
 
 if __name__ == "__main__":
